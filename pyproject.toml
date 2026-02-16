@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yfinance_fixed"
+dynamic = ["version"]
+description = "Package to fix SSL Errors"
+readme = "README.md"
+authors = [
+      { name = "João", email = "joaoxfernando@outlook.com" }
+]
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+dependencies = [
+  "yfinance>=1.1.0",
+  "curl_cffi>=0.13.0",
+  "pandas>=3.0.0"
+]
+
+[tool.setuptools.dynamic]
+version = { attr = "yfinance_fixed.version.__version__" }
+
+[project.urls]
+Homepage = "https://github.com/joaoxfernando/yfinance_fixed"
