@@ -7,7 +7,7 @@ session = requests.Session(impersonate="chrome")
 session.verify = False
 
 
-def req(ticker: str, start: Optional[str] = None, end: Optional[str] = None):
+def download(ticker: str, start: Optional[str] = None, end: Optional[str] = None):
     df = yf.download(ticker, start=start, end=end, session=session)
     df.columns = df.columns.get_level_values(0)
     return df

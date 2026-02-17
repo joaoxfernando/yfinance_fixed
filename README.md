@@ -11,12 +11,12 @@ import yfinance_fixed as yfx
 
 To use it, run:
 ```python
-yfx.req(ticker)
+yfx.download(ticker)
 ```
 
 You can also use the command with start and end date parameters if you wish:
 ```python
-yfx.req(ticker, start='YYYY-MM-DD', end='YYYY-MM-DD')
+yfx.download(ticker, start='YYYY-MM-DD', end='YYYY-MM-DD')
 ```
 
 For suggestions or bugs, please use the **issues** page or submit a **pull request**.
